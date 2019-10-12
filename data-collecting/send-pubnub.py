@@ -38,11 +38,10 @@ while True:
                 'x': time.time(),
                 'humidity': h
             }).sync()
-        print("publish timetoken: %d" % envelope.result.timetoken)
+        print("publish timetoken: %d" % envelope2.result.timetoken)
         #logging
         #logging.info('Temp={0:0.1f} C and Humidity={1:0.1f} %'.format(t, h)) 
         #wait 5 mins
         time.sleep(300)
     except PubNubException as e:
         handle_exception(e)
-
